@@ -15,6 +15,8 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
+    @categories = Category.all.collect {|c| [c.name, c.id ] }
+    @writers = Writer.all.collect {|w| [w.name, w.id] }
   end
 
   # GET /books/1/edit
