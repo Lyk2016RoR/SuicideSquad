@@ -21,4 +21,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* This project is for LYK2016. A basic book rating web site which has users.
