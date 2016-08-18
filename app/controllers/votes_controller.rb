@@ -5,7 +5,8 @@ class VotesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @vote = @book_or_writer.votes.new(comment_params)
+    @vote = @book_or_writer.votes.new
+    @vote.rating = params[:vote][:rating]
     @vote.user = current_user
 
     if @vote.save

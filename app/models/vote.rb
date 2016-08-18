@@ -1,5 +1,6 @@
 class Vote < ApplicationRecord
   belongs_to :user
-  belongs_to :book
-  belongs_to :writer
+
+  validates :rating, inclusion: (1..5)
+  validates :user_id, uniqueness: {scope: :book_id}
 end
