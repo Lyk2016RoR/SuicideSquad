@@ -13,5 +13,5 @@ w1= Writer.create(name: "Elif Şafak")
 w2= Writer.create(name: "Cahit Sıtkı Tarancı")
 w3= Writer.create(name: "Dostoyevski")
 
-b1 = Book.create(name:"Aşk", published_at:"10.09.2010", description:"dfsdfsd", publishing_house:"Can Yayınları", category_id:1 , writer_id:1)
-b2 = Book.create(name:"Suç ve Ceza", published_at:"10.09.1978", description:"dfsdfsd", publishing_house:"Can Yayınları", category_id:1 , writer_id:1)
+b1 = Book.create(name:"Aşk", published_at:"10.09.2010", description:"dfsdfsd", publishing_house:"Can Yayınları", category: c1 , writer: w1)
+b2 = Book.create(name:"Suç ve Ceza", published_at:"10.09.1978", description:"dfsdfsd", publishing_house:"Can Yayınları", category: c2 , writer: w2)

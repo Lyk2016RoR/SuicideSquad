@@ -15,12 +15,12 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
-    @categories = Category.all.collect {|c| [c.name, c.id ] }
-    @writers = Writer.all.collect {|w| [w.name, w.id] }
+    load_form_data
   end
 
   # GET /books/1/edit
   def edit
+    load_form_data
   end
 
   # POST /books
@@ -33,6 +33,7 @@ class BooksController < ApplicationController
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
       else
+        load_form_data
         format.html { render :new }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
@@ -47,6 +48,7 @@ class BooksController < ApplicationController
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
         format.json { render :show, status: :ok, location: @book }
       else
+        load_form_data
         format.html { render :edit }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
@@ -71,6 +73,11 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:name, :published_at, :description, :publishing_house, :link)
+      params.require(:book).permit(:name, :published_at, :description, :publishing_house, :link, :category_id, :writer_id)
+    end
+
+    def load_form_data
+      @categories = Category.all.collect {|c| [c.name, c.id ] }
+      @writers = Writer.all.collect {|c| [c.name, c.id ] }
     end
 end
