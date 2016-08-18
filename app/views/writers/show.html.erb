@@ -5,5 +5,10 @@
   <%= @writer.name %>
 </p>
 
+<%= form_for [@writer, @writer.comments.build] do |f| %>
+  <%= f.text_area :body, rows: 5 %><br>
+  <%= f.submit 'Send' %>
+<% end %>
+
 <%= link_to 'Edit', edit_writer_path(@writer) %> |
 <%= link_to 'Back', writers_path %>

@@ -32,7 +32,7 @@
 
 <p>
   <strong>Writer:</strong>
-  <%= @book.writer.name %>
+  <%=link_to  @book.writer.name , writer_path(@book.writer) %>
 </p>
 <h4>Rating:</h4>
 <%= render 'votes/form' %>
