@@ -34,7 +34,11 @@
   <strong>Writer:</strong>
   <%= @book.writer.name %>
 </p>
+<h4>Rating:</h4>
+<%= render 'votes/form' %>
 
+<br><br>
+<h1>Comments</h1>
 <%= form_for [@book, @book.comments.build] do |f| %>
   <%= f.text_area :body, rows: 5 %><br>
   <%= f.submit 'Send' %>
