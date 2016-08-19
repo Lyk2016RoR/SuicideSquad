@@ -7,7 +7,7 @@ class Book < ApplicationRecord
 
   belongs_to :category
   belongs_to :writer
-  belongs_to :status
+  has_many :statuses
   has_many :comments
   has_many :votes
   has_and_belongs_to_many :tags
