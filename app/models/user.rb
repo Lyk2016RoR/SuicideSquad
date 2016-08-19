@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :comments
   has_many :votes
+  has_many :statuses
 
   has_attached_file :avatar, styles: { medium: "400x300>", small: "50x50>" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
