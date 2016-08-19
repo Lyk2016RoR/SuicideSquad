@@ -3,8 +3,6 @@ class CommentsController < ApplicationController
 
     before_action :authenticate_user!
 
-
-
     def create
      @comment = @book_or_writer.comments.new(comment_params)
      @comment.user = current_user

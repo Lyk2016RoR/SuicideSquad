@@ -38,7 +38,7 @@
   <strong>Writer:</strong>
   <%=link_to  @book.writer.name , writer_path(@book.writer) %>
 
-   <% if @book.status.present? %>
+   <% if @book.statuses.present? %>
   <strong>Durum:</strong>
   <%= @book.status.name %>
   <% end%>
