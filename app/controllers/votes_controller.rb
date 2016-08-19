@@ -24,8 +24,10 @@ class VotesController < ApplicationController
   def update
     if @vote.update(rating: params[:vote][:rating])
       redirect_to @book_or_writer, notice: "Vote was saved."
+    elsif @vote.present?
+      redirect_to @book_or_writer, notice: "Vote already exist."
     else
-      redirect_to @book_or_writer, notice: "Vote is not valid."
+      redirect_to @book_or_writer, notice: "Vote couldn't saved."
     end
   end
 
