@@ -17,6 +17,9 @@ class CommentsController < ApplicationController
     end
 
     def destroy
+      @comment = Comment.find(params[:id])
+      @comment.destroy
+      redirect_to @book_or_writer, notice: "Comment was deleted"
     end
 
    private
@@ -26,8 +29,6 @@ class CommentsController < ApplicationController
    end
 
    def set_book_or_writer
-     @book_or_writer = params[:book_id].nil? ?  Writer.find(params[:writer_id]) :Book.find(params[:book_id])
+     @book_or_writer = params[:book_id].nil? ?  Writer.find(params[:writer_id]) : Book.find(params[:book_id])
    end
-
-
 end
