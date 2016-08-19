@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
     resources :books, :writers do
         resources :comments, only: [:create, :destroy]
-      resources :votes, only: [:create, :destroy]
+      resources :votes, only: [:create, :update]
     end
     root 'books#index'
 

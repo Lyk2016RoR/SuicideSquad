@@ -38,6 +38,11 @@
   <strong>Writer:</strong>
   <%=link_to  @book.writer.name , writer_path(@book.writer) %>
 </p>
+
+<p>
+  <b>Average Rating: </b><%= @book.average_rating %><br />
+</p>
+
 <h4>Rating:</h4>
 <%= render 'votes/form' %>
 
