@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-  validates :name, presence: true , :body, length: { minimum: 10}
+  validates :name, presence: true 
   belongs_to :user
 end
