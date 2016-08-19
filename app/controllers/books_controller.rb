@@ -73,11 +73,12 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:name, :published_at, :description, :publishing_house, :link, :category_id, :writer_id)
+      params.require(:book).permit(:name, :published_at, :description, :publishing_house, :link, :category_id, :writer_id, tag_ids: [])
     end
 
     def load_form_data
       @categories = Category.all.collect {|c| [c.name, c.id ] }
       @writers = Writer.all.collect {|c| [c.name, c.id ] }
+      @tags = Tag.all
     end
 end

@@ -12,7 +12,9 @@ class VotesController < ApplicationController
     if @vote.save
       redirect_to @book_or_writer, notice: "Vote was saved"
     else
+      byebug
       redirect_to @book_or_writer, notice: "Vote couldn't saved"
+
     end
   end
 

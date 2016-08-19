@@ -44,6 +44,8 @@
   <%= f.submit 'Send' %>
 <% end %>
 
+<b>Tags: </b><%= @book.tags.collect {|x| x.name }.join(", ")%> <br/>
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

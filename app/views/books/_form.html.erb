@@ -44,6 +44,10 @@
      <%= f.select :writer_id, @writers %>
   </div>
 
+  <div>
+    <%= f.collection_check_boxes(:tag_ids, @tags, :id, :name) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
