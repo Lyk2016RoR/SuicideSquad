@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
     resources :books, :writers do
         resources :comments, only: [:create, :destroy]
       resources :votes, only: [:create, :update]

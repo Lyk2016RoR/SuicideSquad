@@ -39,7 +39,6 @@
   <%=link_to  @book.writer.name , writer_path(@book.writer) %>
 
    <% if @book.statuses.present? %>
-  <strong>Durum:</strong>
   <%= @book.status.name %>
   <% end%>
 
@@ -57,8 +56,9 @@
     <% end %>
 
   <div class="field">
-    <%= f.select :status_id, @statuses %>
+  <strong>Durum:</strong> <%= f.select :status_id, @statuses %>
   </div>
+      <%= f.submit 'Onayla' %>
  <% end %>
 
 </p>
