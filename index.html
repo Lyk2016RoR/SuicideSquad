@@ -24,11 +24,10 @@
     <!--or for Font Awesome local/server version: <link href="MegaNavbar/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" href="assets/css/style.css" media="screen"charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/MegaNavbar.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/skins/navbar-inverse.css" title="inverse">
+    <link rel="stylesheet" type="text/css" href="assets/css/skins/navbar-grey-dark.css" title="inverse">
     <link rel="stylesheet" type="text/css" href="assets/css/animation/animation.css" title="inverse">
-
-    <link rel="shortcut icon" href="./favicon.ico" />
 
     <!-- jQuery JavaScript CDN version (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -43,7 +42,7 @@
 
 
 <body>
-        <nav class="navbar navbar-inverse no-border-radius xs-height75 navbar-static-top" id="main_navbar" role="navigation">
+        <nav class="navbar navbar-grey-dark no-border-radius xs-height75 navbar-static-top" id="main_navbar" role="navigation">
         <div class="container">
         	<div class="container-fluid">
         		<!-- Brand and toggle get grouped for better mobile display -->
@@ -299,7 +298,154 @@
         	</div>
         </div>
         </nav>
+        <div class="container">
+          <div class="row">
+             <div class="col-md-9">
 
+               <!-- Full Page Image Background Carousel Header -->
+                <header id="myCarousel" class="carousel slide">
+              <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+
+                  <!-- Wrapper for Slides -->
+                  <div class="carousel-inner">
+                      <div class="item active">
+                          <!-- Set the first background image using inline CSS below. -->
+                          <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                          <div class="carousel-caption">
+                              <h2>Caption 1</h2>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <!-- Set the second background image using inline CSS below. -->
+                          <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                          <div class="carousel-caption">
+                              <h2>Caption 2</h2>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <!-- Set the third background image using inline CSS below. -->
+                          <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                          <div class="carousel-caption">
+                              <h2>Caption 3</h2>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                      <span class="icon-prev"></span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                      <span class="icon-next"></span>
+                  </a>
+
+              </header>
+
+             </div>
+             <div class="col-md-3 text-center">
+                <img src="http://placehold.it/300x300" alt="" class="img-responsive">
+                <h2>Haftanın Kitabı</h2>
+                <p>Otostopçunun Galaksi Rehberi</p>
+                <p><a class="btn btn-default" href="#" role="button">Kitaba Git &raquo;</a></p>
+             </div>
+          </div>
+        </div>
+        </div>
+        <div class="container">
+          <div class="top-m" >
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#top5" aria-controls="top5" role="tab" data-toggle="tab">En iyi 5</a></li>
+              <li role="presentation"><a href="#latest" aria-controls="latest" role="tab" data-toggle="tab">En Yeniler</a></li>
+              <li role="presentation"><a href="#authors" aria-controls="authors" role="tab" data-toggle="tab">Yazarlar</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="top5">
+                <div class="row clearfix top-m">
+                  <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail">
+                      <img src="http://placehold.it/250x250" alt="...">
+                    </a>
+                  </div>
+                    <div class="col-xs-6 col-md-3">
+                      <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/250x250" alt="...">
+                      </a>
+                    </div>
+                      <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                          <img src="http://placehold.it/250x250" alt="...">
+                        </a>
+                      </div>
+                        <div class="col-xs-6 col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://placehold.it/250x250" alt="...">
+                          </a>
+                        </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="latest">
+                <div class="row clearfix top-m">
+                  <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail">
+                      <img src="http://placehold.it/250x250" alt="...">
+                    </a>
+                  </div>
+                    <div class="col-xs-6 col-md-3">
+                      <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/250x250" alt="...">
+                      </a>
+                    </div>
+                      <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                          <img src="http://placehold.it/250x250" alt="...">
+                        </a>
+                      </div>
+                        <div class="col-xs-6 col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://placehold.it/250x250" alt="...">
+                          </a>
+                        </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="authors">
+                <div class="row clearfix top-m">
+                  <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail">
+                      <img src="http://placehold.it/250x250" alt="...">
+                    </a>
+                  </div>
+                    <div class="col-xs-6 col-md-3">
+                      <a href="#" class="thumbnail">
+                        <img src="http://placehold.it/250x250" alt="...">
+                      </a>
+                    </div>
+                      <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                          <img src="http://placehold.it/250x250" alt="...">
+                        </a>
+                      </div>
+                        <div class="col-xs-6 col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://placehold.it/250x250" alt="...">
+                          </a>
+                        </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+      </div>
 
     <script>
         //Start navbar toggle fix top bottom
