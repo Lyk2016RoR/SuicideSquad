@@ -9,7 +9,9 @@ class CommentsController < ApplicationController
      @comment = @book_or_writer.comments.new(comment_params)
      @comment.user = current_user
 
+  
      if @comment.save
+
        redirect_to @book_or_writer, notice: "Comment was saved"
      else
        redirect_to @book_or_writer, notice: "Comment couldn't saved"
